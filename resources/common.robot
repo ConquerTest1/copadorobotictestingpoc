@@ -7,7 +7,7 @@ Library                         String
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
 ${username}                     wayne@bamteamservices.com
-${login_url}                    https://bamteamservices.my.salesforce.com                     # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${login_url}                    https://bamteamservices.my.salesforce.com               # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 
 
@@ -57,7 +57,13 @@ Fill MFA
     TypeSecret                  Verification Code           ${mfa_code}
     ClickText                   Verify
 
-
+Cadence Management
+    [Documentation]             Navigate to candence management, login if needed
+    GoTo                        ${home_url}
+    ${login_status}=            IsText                      To access this page, you have to log in to Salesforce.
+    Run Keyword If              ${login_status}             Login
+    LaunchApp                   Cadence Management
+    VerifyText                  Login with your CRM credentials to get started
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
