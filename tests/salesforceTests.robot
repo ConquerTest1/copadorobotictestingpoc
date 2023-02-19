@@ -9,8 +9,8 @@ Library                  QVision
 *** Test Cases ***
 
 Conquer PoC
-    [Documentation]    Test Case created using the QEditor
-        ${email_name}=       FakerLibrary.Sentence       nb_words=5
+    [Documentation]      Test Case created using the QEditor
+    ${email_name}=       FakerLibrary.Sentence       nb_words=5
     ${mergefield}=       FakerLibrary.Text           max_nb_chars=10
     Login
     QVision.ClickText    Login with Salesforce
