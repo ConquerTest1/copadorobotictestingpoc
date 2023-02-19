@@ -60,7 +60,7 @@ Fill MFA
 Cadence Management
     [Documentation]             Navigate to candence management, login if needed
     GoTo                        ${home_url}
-    ${login_status} =            IsText                      To access this page, you have to log in to Salesforce.
+    ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.
     Run Keyword If              ${login_status}             Login
     LaunchApp                   Cadence Management
     VerifyText                  Login with your CRM credentials to get started
