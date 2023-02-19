@@ -12,7 +12,8 @@ Conquer PoC
     [Documentation]      Test Case created using the QEditor
     ${email_name}=       FakerLibrary.Sentence       nb_words=5
     ${mergefield}=       FakerLibrary.Text           max_nb_chars=10
-    Login
+    #Cadence management is a custom keyword.  It logs in and opens the Cadence Management App
+    Cadence Management
     QVision.ClickText    Login with Salesforce
     ClickText            Email
     ClickText            New Template
