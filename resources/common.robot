@@ -19,7 +19,7 @@ Setup Browser
     Open Browser                about:blank                 ${BROWSER}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
-
+    SetConfig                   WindowSize                  1920x1080
 
 End suite
     Close All Browsers
