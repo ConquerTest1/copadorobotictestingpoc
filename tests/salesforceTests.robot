@@ -35,8 +35,6 @@ Conquer PoC
     ClickText         Cadence Options
     TypeText          Select an option      Default
     HotKey            Enter
-    TypeText          Select an option      HVS Public Group      anchor=Public Group Assignments
-    HotKey            Enter
     ClickText         Next
     ClickText         Save
     ClickItem         fitview           timeout=5
