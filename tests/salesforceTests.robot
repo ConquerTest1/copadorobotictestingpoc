@@ -26,9 +26,10 @@ Conquer PoC
     TypeText             Start typing to select profiles                         System Administrator
     HotKey               Enter
     HotKey               Tab                         sleep=3
-    WriteText            This is the subject line
+    WriteText            Hello 
     QVision.ClickText    Merge                       anchor=Font                 timeout=5
     ClickText            ${mergefield}               anchor=Font                 timeout=5
+    WriteText            , (end of body insert)
     ClickText            Save
     ClickText            Cadences
     ClickText            Create Cadence
