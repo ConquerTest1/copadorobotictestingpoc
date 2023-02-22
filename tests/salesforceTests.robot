@@ -22,8 +22,8 @@ Conquer PoC
     HotKey            Enter
     TypeText          Name              ${email_name}
     TypeText          Subject           This is a test
-    TypeText          Start typing to select profiles   System Administrator
-    HotKey            Enter
+    TypeText          Start typing to select profiles   System Administrator    sleep=2   
+    HotKey            Enter                        sleep=2
     HotKey            Tab               sleep=3
     WriteText         Hello
     QVision.ClickText     Merge             anchor=Font       timeout=5
@@ -34,10 +34,11 @@ Conquer PoC
     ClickText         Create Cadence
     ClickText         Cadence Options
     UseModal          status=on
-    TypeText         Select an option Def
+    TypeText         Select an option                     Default    anchor=Business Hours*
+    Sleep            3
     HotKey            Enter
-    ClickText         Default
-    ClickText         Next
+    #ClickText         Default                        anchor="2"
+    ClickText         Next                        sleep=1
     ClickText         Save
     UseModal          status=off
     ClickItem         fitview           timeout=5
