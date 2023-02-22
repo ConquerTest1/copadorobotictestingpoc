@@ -33,10 +33,13 @@ Conquer PoC
     ClickText         Cadences
     ClickText         Create Cadence
     ClickText         Cadence Options
-    TypeText          Select an option      Default
+    UseModal          status=on
+    TypeText         Select an option Def
     HotKey            Enter
+    ClickText         Default
     ClickText         Next
     ClickText         Save
+    UseModal          status=off
     ClickItem         fitview           timeout=5
     DragDrop          Email             Enroll Cadence Member     anchor=Steps      dragtime=5        below=300         loc_above=40
     ClickItem         fitview
