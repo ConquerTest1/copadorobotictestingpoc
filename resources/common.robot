@@ -58,7 +58,7 @@ Fill MFA
     ClickText                   Verify
 
 Cadence Management
-    [Documentation]             Navigate to candence management, login if needed
+    [Documentation]             Navigate to Cadence Management, login if needed
     GoTo                        ${home_url}
     ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                              2
     Run Keyword If              ${login_status}             Login
