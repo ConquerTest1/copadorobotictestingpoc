@@ -24,17 +24,21 @@ Conquer PoC
     HotKey            Enter
     Sleep            1
     TypeText          Name              ${email_name}
-    TypeText          Subject           This is a test
+    TypeText          Subject           This is the subject
     TypeText          Start typing to select profiles   System Administrator    sleep=2   
     HotKey            Enter                        sleep=2
     HotKey            Tab               sleep=3
-    WriteText         Hello
+    WriteText         Hello 
     QVision.ClickText     Merge             anchor=Font       timeout=5
     ClickText         ${mergefield}     anchor=Font       timeout=5
-    WriteText         , (end of body insert)
+    WriteText         , 
+    Hotkey            Enter
+    Hotkey            Enter
+    WriteText         This is the body of the email. 
     Sleep            1
     ClickText         Save
     ClickText         Cadences
+    Sleep            2
     ClickText         Create Cadence
     Sleep            1
     ClickText         Cadence Options
@@ -47,6 +51,7 @@ Conquer PoC
     ClickText         Save
     UseModal          status=off
     ClickItem         fitview           timeout=5
+    Sleep            1
     DragDrop          Email             Enroll Cadence Member     anchor=Steps      dragtime=5        below=300         loc_above=40
     ClickItem         fitview
     ClickText         Step information is incomplete
