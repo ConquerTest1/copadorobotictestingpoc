@@ -1,4 +1,8 @@
 *** Settings ***
+
+Library    QForce
+
+Library    QWeb
 Resource                 ../resources/common.robot
 Suite Setup              Setup Browser
 Suite Teardown           End suite
@@ -64,3 +68,45 @@ Conquer PoC
     Sleep            1
     ClickText         Back to cadences
     ClickText         Yes
+
+Recorded SF testcase misc moves
+    [Documentation]   Just to get a handle on the recorded test case functionality without the LWC/iFrame complexities.
+    [Tags]            misc
+    Setup Browser
+    Login
+    ClickText         Show Navigation Menu
+    ClickText         Cadence Members
+    ClickText         Display    partial_match=true
+    ClickText         Table
+    ClickText         Select a List View
+    HoverText         All
+    ClickText         Sales Team Cadence Members
+    HoverText         Sales Team Cadence Members
+    ClickText         Refresh
+    VerifyText        No items to    partial_match=True
+    ClickText         Show Navigation Menu
+    HoverText         Cadences
+    ClickText         Leads
+    UseTable          Item Number
+    ClickCell         r1c2
+    ClickCell         r2c2
+    ClickCell         r3c2
+    HoverText         Refresh
+    ClickText         Show more actions
+    HoverText         Show more actions
+    ClickText         New Bulk Enrollment
+    # activity here was not recorded ?!?
+    ClickText         Show Navigation Menu
+    ClickText         Cadence Members
+    ClickText         Select a List View
+    ClickText         Sales Team Cadence Members
+    HoverText         All
+    HoverText         My Active Cadence Members
+    HoverText         My Cadence Members
+    HoverText         Recently Viewed
+    HoverText         Sales Team Cadence Members
+    HoverText         Refresh
+    ClickText         Refresh
+    ClickText         Select 2 items
+    ClickText         Select 2 items
+    ClickText         Select 2 items
